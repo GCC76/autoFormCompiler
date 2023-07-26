@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+<title>Form example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=2.0, minimum-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+</head>
+
+<body>
+
+	<form>
+		<input type="text" name="name" value="" />
+		<input type="text" name="surname" value="" />
+		<input type="date" name="birthday" value="" />
+		<input type="text" name="address" value="" />
+		<input type="radio" name="radio[]" value="1" />
+		<input type="radio" name="radio[]" value="2" />
+		<input type="radio" name="radio[]" value="3" />
+		<input type="checkbox" name="checkbox" value="1" />
+		<select name="options">
+			<option value="1">First</option>
+			<option value="2">Second</option>
+			<option value="3">Third</option>
+		</select>
+		<select name="onchange">
+			<option value="">Choose</option>
+			<option value="1">Selected on change</option>
+		</select>
+		
+	</form>
+	
+	<script>
+	let myInput = document.querySelectorAll("[name='radio[]']");
+	myInput.forEach( input => {
+		input.addEventListener("change", event => {
+			document.querySelector("[name='onchange']").value = 1;
+		})
+	})
+	</script>
+	
+</body>
+</html>
