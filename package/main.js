@@ -15,6 +15,9 @@ chrome.runtime.onMessage.addListener(
 		Object.keys(data).forEach( field => {
 			
 			let input = document.querySelector("[name='"+field+"']");
+			if(!input){
+				return;
+			}
 			let type = input.type;
 			
 			switch(type){
