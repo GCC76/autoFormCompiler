@@ -1,5 +1,6 @@
 # autoFormCompiler
 Chrome extension for autofilling forms
+
 Example files and extension package are included
 
 # Purpose
